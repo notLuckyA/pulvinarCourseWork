@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.AleksSH</groupId>
-    <artifactId>pulvinarCourseWork</artifactId>
+    <groupId>com.example</groupId>
+    <artifactId>Pulvinar</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>pulvinarCourseWork</name>
+    <name>Pulvinar</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit.version>5.7.1</junit.version>
+        <junit.version>5.8.2</junit.version>
     </properties>
 
     <dependencies>
@@ -25,7 +25,11 @@
             <artifactId>javafx-fxml</artifactId>
             <version>17.0.0.1</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.kordamp.bootstrapfx</groupId>
+            <artifactId>bootstrapfx-core</artifactId>
+            <version>0.4.0</version>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -37,6 +41,20 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+        <!-- MySQL JDBC driver -->
+        <!-- http://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.25</version>
+        </dependency>
+        <!-- Hibernate Core -->
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.6.1.Final</version>
         </dependency>
     </dependencies>
 
@@ -60,8 +78,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.alekssh.pulvinarcoursework/com.alekssh.pulvinarcoursework.HelloApplication
-                            </mainClass>
+                            <mainClass>com.example.pulvinar/com.example.pulvinar.Main</mainClass>
                         </configuration>
                     </execution>
                 </executions>
