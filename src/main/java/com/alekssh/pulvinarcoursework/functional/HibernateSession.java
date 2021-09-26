@@ -1,4 +1,4 @@
-package com.example.pulvinar.functional;
+package com.alekssh.pulvinarcoursework.functional;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;

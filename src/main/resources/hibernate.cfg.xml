@@ -10,9 +10,9 @@
         <property name="hibernate.format_sql">true</property>
 
         <property name="hibernate.hbm2ddl.auto">update</property>
-        <mapping class="com.example.pulvinar.tables.User"/>
-        <mapping class="com.example.pulvinar.tables.Order"/>
-        <mapping class="com.example.pulvinar.tables.OrderId"/>
-        <mapping class="com.example.pulvinar.tables.Product"/>
+        <mapping class="com.alekssh.pulvinarcoursework.tables.User"/>
+        <mapping class="com.alekssh.pulvinarcoursework.tables.Order"/>
+        <mapping class="com.alekssh.pulvinarcoursework.tables.OrderId"/>
+        <mapping class="com.alekssh.pulvinarcoursework.tables.Product"/>
     </session-factory>
 </hibernate-configuration>

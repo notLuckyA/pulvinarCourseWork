@@ -1,4 +1,4 @@
-module com.example.pulvinar {
+module com.alekssh.pulvinarcoursework {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -6,6 +6,6 @@ module com.example.pulvinar {
     requires java.persistence;
     requires org.hibernate.orm.core;
 
-    opens com.example.pulvinar to javafx.fxml;
-    exports com.example.pulvinar;
+    exports com.alekssh.pulvinarcoursework;
+    opens com.alekssh.pulvinarcoursework to javafx.fxml;
 }

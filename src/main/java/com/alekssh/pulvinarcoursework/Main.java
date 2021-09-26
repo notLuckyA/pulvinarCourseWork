@@ -1,4 +1,4 @@
-package com.example.pulvinar;
+package com.alekssh.pulvinarcoursework;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

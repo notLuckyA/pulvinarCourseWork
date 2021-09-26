@@ -1,4 +1,4 @@
-package com.example.pulvinar.tables;
+package com.alekssh.pulvinarcoursework.tables;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
