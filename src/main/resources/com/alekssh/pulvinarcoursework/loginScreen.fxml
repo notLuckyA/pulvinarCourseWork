@@ -30,14 +30,14 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Label fx:id="btnToRegistation" accessibleRole="BUTTON" text="Зарегистрироватся " textFill="#3089c9">
+            <Button fx:id="btnToRegistation" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#registration" style="-fx-background-color: #ffffff;" text="Зарегистрироваться" textFill="#3089c9">
                <font>
                   <Font size="14.0" />
                </font>
                <VBox.margin>
                   <Insets top="15.0" />
                </VBox.margin>
-            </Label>
+            </Button>
          </children>
          <BorderPane.margin>
             <Insets left="150.0" right="150.0" />

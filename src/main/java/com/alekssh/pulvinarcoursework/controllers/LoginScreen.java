@@ -15,7 +15,7 @@ public class LoginScreen {
     public Button btnLogin;
     public TextField loginField;
     public PasswordField passwordField;
-    public Label btnToRegistation;
+    public Button btnToRegistation;
 
     protected static String login;
 
@@ -36,5 +36,8 @@ public class LoginScreen {
                 e.printStackTrace();
             }
         }
+    }
+    public void registration(ActionEvent actionEvent) throws IOException {
+        Main.setRoot("registrationScreen");
     }
 }
