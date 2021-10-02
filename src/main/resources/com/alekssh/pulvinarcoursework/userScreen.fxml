@@ -63,12 +63,12 @@
                                        <children>
                                           <ImageView fx:id="btnVK" accessibleRole="HYPERLINK" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../../../../../images/vk_icons.png" />
+                                                <Image url="@images/vk_icons.png" />
                                              </image>
                                           </ImageView>
                                           <ImageView fx:id="brnFacebbook" accessibleRole="HYPERLINK" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../../../../../images/facebook_icons.png" />
+                                                <Image url="@images/facebook_icons.png" />
                                              </image>
                                           </ImageView>
                                        </children>
@@ -90,7 +90,7 @@
                                     </Label>
                                     <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../../../../../images/pillows.png" />
+                                          <Image url="@images/pillows.png" />
                                        </image>
                                     </ImageView>
                                     <Label text="от 1500р.">
@@ -112,7 +112,7 @@
                                     </Label>
                                     <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../../../../../images/pillowcase.png" />
+                                          <Image url="@images/pillowcase.png" />
                                        </image>
                                        <VBox.margin>
                                           <Insets />

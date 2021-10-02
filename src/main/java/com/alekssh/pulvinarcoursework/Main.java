@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,6 +17,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("loginScreen"), 600, 400);
         stage.setTitle("Pulvinar");
+        stage.getIcons().add(new Image("file:src/main/resources/com/alekssh/pulvinarcoursework/images/pillows_icons.png"));
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
