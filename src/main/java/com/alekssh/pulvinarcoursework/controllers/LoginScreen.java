@@ -16,6 +16,7 @@ public class LoginScreen {
     public TextField loginField;
     public PasswordField passwordField;
     public Button btnToRegistation;
+    public Label errorLoginText;
 
     protected static String login;
 
@@ -31,10 +32,14 @@ public class LoginScreen {
                     } else if (user.getRole().equals("admin")) {
                         Main.setRoot("adminScreen");
                     }
+                } else {
+                    errorLoginText.setText("Неверный логин или пароль");
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        } else {
+            errorLoginText.setText("Пустые поля");
         }
     }
     public void registration(ActionEvent actionEvent) throws IOException {

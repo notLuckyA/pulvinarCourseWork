@@ -21,13 +21,14 @@ public class RegistrationScreen {
     public PasswordField registrationPassword;
     public Button btnRegistration;
     public Button btnBack;
-    public Label errorText;
+    public Label errorRegistrationText;
+
 
     public void rigistrationUser(ActionEvent actionEvent) throws IOException {
         if (registrationName.getText().isBlank() || registrationLastName.getText().isBlank()
                 || registrationEmail.getText().isBlank() || registrationTel.getText().isBlank()
                 || registrationLogin.getText().isBlank() || registrationPassword.getText().isBlank()) {
-            errorText.setText("Неправильное заполнение");
+            errorRegistrationText.setText("Неправильное заполнение");
         } else {
             try {
                 InterfaceDB userCRUD = new InterfaceDB();
@@ -43,10 +44,10 @@ public class RegistrationScreen {
                     userCRUD.createUser(user);
                     Main.setRoot("loginScreen");
                 } else {
-                    errorText.setText("Логин занят");
+                    errorRegistrationText.setText("Логин занят");
                 }
             } catch (Exception e) {
-                errorText.setText("GLOBAL ERROR");
+                errorRegistrationText.setText("GLOBAL ERROR");
             }
         }
     }
