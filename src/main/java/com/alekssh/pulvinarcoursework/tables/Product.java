@@ -25,17 +25,6 @@ public class Product {
     @Column(name = "productPrice")
     private Integer productPrice;
 
-    @Column(name = "linkImages", length = 150)
-    private String linkImages;
-
-    public String getLinkImages() {
-        return linkImages;
-    }
-
-    public void setLinkImages(String linkImages) {
-        this.linkImages = linkImages;
-    }
-
     public Integer getProductPrice() {
         return productPrice;
     }
