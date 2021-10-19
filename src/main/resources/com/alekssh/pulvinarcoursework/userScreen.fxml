@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleButton?>
-<?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alekssh.pulvinarcoursework.controllers.UserScreen">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alekssh.pulvinarcoursework.controllers.UserScreen">
    <center>
       <TabPane tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
@@ -161,7 +150,7 @@
                         </Label>
                      </top>
                      <center>
-                        <TableView fx:id="tableFromProduct" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+                        <TableView fx:id="tableFromProduct" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#onMouseClicked" BorderPane.alignment="CENTER">
                           <columns>
                             <TableColumn fx:id="columnName" prefWidth="130.0" text="Название" />
                               <TableColumn fx:id="columnType" prefWidth="130.0" text="Тип" />
@@ -175,14 +164,26 @@
                         </TableView>
                      </center>
                      <bottom>
-                        <Button fx:id="btnPillowsToBasket" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #276fa3;" text="Добавить в корзину" textFill="WHITE" BorderPane.alignment="CENTER">
+                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="btnPillowsToBasket" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addProductToBasket" style="-fx-background-color: #276fa3;" text="Добавить в корзину" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="errorLabel" textFill="#ff004a">
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
                            <BorderPane.margin>
-                              <Insets bottom="20.0" left="150.0" right="150.0" />
+                              <Insets left="150.0" right="150.0" />
                            </BorderPane.margin>
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Button>
+                        </VBox>
                      </bottom></BorderPane>
                </content>
             </Tab>
@@ -201,32 +202,29 @@
                            <children>
                               <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                                  <children>
-                                    <Label fx:id="pillowsInBasket">
+                                    <Label fx:id="productInBasket">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="colPillowsInBasket">
+                                    <TextField fx:id="colProductInBasket" alignment="TOP_LEFT" onAction="#revaluation" promptText="Указать кол-во" text="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
                                        <HBox.margin>
-                                          <Insets left="50.0" />
+                                          <Insets left="10.0" />
                                        </HBox.margin>
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Label>
+                                    </TextField>
                                  </children>
                               </HBox>
-                              <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                              <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                                  <children>
-                                    <Label fx:id="pillowcaseInBasket">
+                                    <Label text="Сумма: ">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="colPillowcaseInBasket">
-                                       <HBox.margin>
-                                          <Insets left="50.0" />
-                                       </HBox.margin>
+                                    <Label fx:id="sum" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -236,33 +234,30 @@
                                     <Insets top="15.0" />
                                  </VBox.margin>
                               </HBox>
-                              <Label fx:id="sum">
-                                 <VBox.margin>
-                                    <Insets top="15.0" />
-                                 </VBox.margin>
-                                 <graphic>
-                                    <Label text="Сумма:">
-                                       <padding>
-                                          <Insets right="5.0" />
-                                       </padding>
+                              <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                 <children>
+                                    <ToggleButton fx:id="btnPickup" mnemonicParsing="false" onAction="#hideAdress" style="-fx-background-color: #276fa3;" text="Самовывоз" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
-                                    </Label>
-                                 </graphic>
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <ToggleButton fx:id="btnPickup" mnemonicParsing="false" style="-fx-background-color: #276fa3;" text="Самовывоз" textFill="WHITE">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="delivery" />
+                                       </toggleGroup>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="btnSetAdress" mnemonicParsing="false" onAction="#showAdress" style="-fx-background-color: #276fa3;" text="Указать адресс доставки" textFill="WHITE" toggleGroup="$delivery">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </ToggleButton>
+                                 </children>
                                  <VBox.margin>
-                                    <Insets top="15.0" />
+                                    <Insets top="20.0" />
                                  </VBox.margin>
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </ToggleButton>
-                              <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" visible="false">
+                              </HBox>
+                              <HBox fx:id="adressBox" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" visible="false">
                                  <children>
                                     <Label text="Адрес доставки">
                                        <font>
@@ -273,32 +268,53 @@
                                        <font>
                                           <Font size="14.0" />
                                        </font>
+                                       <HBox.margin>
+                                          <Insets left="8.0" />
+                                       </HBox.margin>
                                     </TextField>
                                  </children>
                                  <VBox.margin>
                                     <Insets top="15.0" />
                                  </VBox.margin>
                               </HBox>
-                              <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
-                                 <VBox.margin>
-                                    <Insets top="15.0" />
-                                 </VBox.margin>
+                              <VBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                                  <children>
-                                    <ToggleButton fx:id="btnCash" mnemonicParsing="false" style="-fx-background-color: #276fa3;" text="Наличными" textFill="WHITE">
+                                    <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <ToggleButton fx:id="btnCash" mnemonicParsing="false" onAction="#showCash" style="-fx-background-color: #276fa3;" text="Наличными" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="payMethod" />
+                                             </toggleGroup>
+                                          </ToggleButton>
+                                          <ToggleButton fx:id="btnCard" mnemonicParsing="false" onAction="#showBC" style="-fx-background-color: #276fa3;" text="Банковской картой" textFill="WHITE" toggleGroup="$payMethod">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </ToggleButton>
+                                       </children>
+                                    </HBox>
+                                    <Label fx:id="textPayment" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textFill="#3089c9">
+                                       <padding>
+                                          <Insets top="15.0" />
+                                       </padding>
                                        <font>
                                           <Font size="14.0" />
                                        </font>
-                                    </ToggleButton>
-                                    <ToggleButton fx:id="btnCard" mnemonicParsing="false" style="-fx-background-color: #276fa3;" text="Банковской картой" textFill="WHITE">
-                                       <HBox.margin>
-                                          <Insets left="10.0" />
-                                       </HBox.margin>
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </ToggleButton>
+                                    </Label>
                                  </children>
-                              </HBox>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </VBox>
                               <Button fx:id="btnOrder" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: #276fa3;" text="Заказать" textFill="WHITE">
                                  <font>
                                     <Font size="14.0" />
