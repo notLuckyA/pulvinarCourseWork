@@ -2,15 +2,14 @@ package com.alekssh.pulvinarcoursework.tables;
 
 import org.hibernate.Hibernate;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 @Embeddable
 public class OrderId implements Serializable {
     private static final long serialVersionUID = -438080711189254608L;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idOrders", nullable = false)
     private Integer idOrders;
     @Column(name = "idUsers", nullable = false)

@@ -309,20 +309,35 @@
                                        <font>
                                           <Font size="14.0" />
                                        </font>
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
                                     </Label>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                       <children>
+                                          <Button fx:id="btnOrder" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: #276fa3;" text="Заказать" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Label fx:id="resultOrder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                             <HBox.margin>
+                                                <Insets left="25.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                    </HBox>
                                  </children>
                                  <VBox.margin>
                                     <Insets />
                                  </VBox.margin>
                               </VBox>
-                              <Button fx:id="btnOrder" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: #276fa3;" text="Заказать" textFill="WHITE">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets top="15.0" />
-                                 </VBox.margin>
-                              </Button>
                            </children>
                            <BorderPane.margin>
                               <Insets left="8.0" />

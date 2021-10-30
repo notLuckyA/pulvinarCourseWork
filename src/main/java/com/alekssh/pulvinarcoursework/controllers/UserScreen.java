@@ -2,13 +2,18 @@ package com.alekssh.pulvinarcoursework.controllers;
 
 import com.alekssh.pulvinarcoursework.Main;
 import com.alekssh.pulvinarcoursework.functional.InterfaceDB;
+import com.alekssh.pulvinarcoursework.tables.Order;
+import com.alekssh.pulvinarcoursework.tables.OrderId;
 import com.alekssh.pulvinarcoursework.tables.Product;
+import com.alekssh.pulvinarcoursework.tables.User;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.util.converter.NumberStringConverter;
@@ -104,9 +109,34 @@ public class UserScreen {
     public void showCash(ActionEvent actionEvent) throws IOException {
         textPayment.setText("Наличными");
     }
+
     public void showBC(ActionEvent actionEvent) throws IOException {
         textPayment.setText("Банковской картой");
     }
+
+//    public void createOrder(ActionEvent actionEvent) throws IOException {
+//        try {
+//            LoginScreen ls = new LoginScreen();
+//            InterfaceDB orderCRUD = new InterfaceDB();
+//            User user = orderCRUD.findByLogin(ls.loginTo.getText());
+//            Order order = new Order();
+//            OrderId orderId = new OrderId();
+//            if (!productInBasket.equals("")) {
+//                orderId.setIdUsers(1);
+//                orderId.setIdProduct(Integer.valueOf(productInBasket.getId()));
+//                order.setNameProduct(productInBasket.getText());
+//                order.setColProduct(Integer.valueOf(colProductInBasket.getText()));
+//                order.setSumCost(Integer.valueOf(sum.getText()));
+//                order.setDeliveryAddress(adressField.getText());
+//                orderCRUD.createOrders(order);
+//                errorLabel.setText("Получилось");
+//            } else {
+//                errorLabel.setText("Не получилось");
+//            }
+//        } catch (Exception e) {
+//            errorLabel.setText("Error");
+//        }
+//    }
 
     public void goOut(ActionEvent actionEvent) throws IOException {
         Main.setRoot("loginScreen");

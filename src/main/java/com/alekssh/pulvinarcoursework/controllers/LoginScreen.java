@@ -17,16 +17,18 @@ public class LoginScreen {
     public PasswordField passwordField;
     public Button btnToRegistation;
     public Label errorLoginText;
+    public Label loginTo;
 
-    protected static String login;
+    public String login;
 
-    public void authorization(ActionEvent actionEvent) throws IOException {
+    public void authorization(ActionEvent actionEvent) {
         InterfaceDB userCRUD = new InterfaceDB();
         if (!loginField.getText().equals("") && !passwordField.getText().equals("")) {
             try {
                 User user = userCRUD.findByLogin(loginField.getText());
                 if (loginField.getText().equals(user.getLogin()) && passwordField.getText().equals(user.getPassword())) {
                     login = user.getLogin();
+//                    loginTo.setText(login);
                     if (user.getRole().equals("user")) {
                         Main.setRoot("userScreen");
                     } else if (user.getRole().equals("admin")) {
@@ -42,6 +44,7 @@ public class LoginScreen {
             errorLoginText.setText("Пустые поля");
         }
     }
+
     public void registration(ActionEvent actionEvent) throws IOException {
         Main.setRoot("registrationScreen");
     }
