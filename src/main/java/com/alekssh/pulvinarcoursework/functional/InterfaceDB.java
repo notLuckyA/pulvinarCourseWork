@@ -12,6 +12,10 @@ public class InterfaceDB {
         return (User) HibernateSession.getSessionFactory().openSession().createQuery("from User U where U.login = '" + login + "'").uniqueResult();
     }
 
+    public static List<User> selectFromUser() {
+        return (List<User>) HibernateSession.getSessionFactory().openSession().createQuery("from User ").list();
+    }
+
     public void createUser(User user) {
         Session session = HibernateSession.getSessionFactory().openSession();
         session.beginTransaction();
