@@ -1,16 +1,19 @@
 package com.alekssh.pulvinarcoursework.controllers;
 
+import com.alekssh.pulvinarcoursework.Main;
 import com.alekssh.pulvinarcoursework.functional.InterfaceDB;
 import com.alekssh.pulvinarcoursework.tables.Product;
 import com.alekssh.pulvinarcoursework.tables.User;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
+import java.io.IOException;
 import java.util.List;
 
 public class AdminScreen {
@@ -78,5 +81,17 @@ public class AdminScreen {
         });
         ObservableList<Product> tableProduct = FXCollections.observableList(productList);
         tablesAdminProduct.setItems(tableProduct);
+    }
+
+    public void goAddUsers(ActionEvent actionEvent) throws IOException {
+        Main.setRoot("adminAddUsesScreen");
+    }
+
+    public void goAddProduct(ActionEvent actionEvent) throws IOException {
+        Main.setRoot("adminAddProductScreen");
+    }
+
+    public void goOut(ActionEvent actionEvent) throws IOException {
+        Main.setRoot("loginScreen");
     }
 }
