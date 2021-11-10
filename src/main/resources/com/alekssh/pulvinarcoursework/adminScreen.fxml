@@ -24,31 +24,46 @@
                         </TableView>
                      </center>
                      <bottom>
-                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
                            <children>
-                              <Button fx:id="btnAddUsers" mnemonicParsing="false" onAction="#goAddUsers" style="-fx-background-color: #276fa3;" text="Добавить" textFill="WHITE">
+                              <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                 <children>
+                                    <Button fx:id="btnAddUsers" mnemonicParsing="false" onAction="#goAddUsers" style="-fx-background-color: #276fa3;" text="Добавить" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnUpdateUsers" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #276fa3;" text="Обновить" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="25.0" right="25.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnDeleteUsers" mnemonicParsing="false" onAction="#deleteUser" style="-fx-background-color: #276fa3;" text="Удалить" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" top="25.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Label fx:id="errorUser" alignment="CENTER" textFill="#ff004a">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Button>
-                              <Button fx:id="btnUpdateUsers" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #276fa3;" text="Обновить" textFill="WHITE">
-                                 <HBox.margin>
-                                    <Insets left="25.0" right="25.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="btnDeleteUsers" mnemonicParsing="false" style="-fx-background-color: #276fa3;" text="Удалить" textFill="WHITE">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
                            </children>
                            <BorderPane.margin>
-                              <Insets bottom="20.0" top="20.0" />
+                              <Insets />
                            </BorderPane.margin>
-                        </HBox>
+                        </VBox>
                      </bottom>
                   </BorderPane>
                </content>
@@ -69,31 +84,40 @@
                         </TableView>
                      </center>
                      <bottom>
-                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
                            <children>
-                              <Button fx:id="btnAddProduct" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#goAddProduct" style="-fx-background-color: #276fa3;" text="Добавить" textFill="WHITE">
+                              <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                 <children>
+                                    <Button fx:id="btnAddProduct" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#goAddProduct" style="-fx-background-color: #276fa3;" text="Добавить" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnUpdateProduct" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #276fa3;" text="Обновить" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="25.0" right="25.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnDeleteProduct" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#deleteProduct" style="-fx-background-color: #276fa3;" text="Удалить" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" top="25.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Label fx:id="errorProduct" alignment="CENTER" textFill="#ff004a">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Button>
-                              <Button fx:id="btnUpdateProduct" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #276fa3;" text="Обновить" textFill="WHITE">
-                                 <HBox.margin>
-                                    <Insets left="25.0" right="25.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="btnDeleteProduct" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #276fa3;" text="Удалить" textFill="WHITE">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
+                              </Label>
                            </children>
-                           <BorderPane.margin>
-                              <Insets bottom="20.0" top="20.0" />
-                           </BorderPane.margin>
-                        </HBox>
+                        </VBox>
                      </bottom>
                   </BorderPane>
                </content>

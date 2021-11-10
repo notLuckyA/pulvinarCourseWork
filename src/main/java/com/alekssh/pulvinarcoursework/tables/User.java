@@ -1,7 +1,5 @@
 package com.alekssh.pulvinarcoursework.tables;
 
-import javafx.scene.Parent;
-
 import javax.persistence.*;
 
 @Entity

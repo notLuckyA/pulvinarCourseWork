@@ -23,9 +23,27 @@ public class InterfaceDB {
         session.getTransaction().commit();
         session.close();
     }
+
+    public static void deleteUser(User user) {
+        Session session = HibernateSession.getSessionFactory().openSession();
+        session.beginTransaction();
+        session.delete(user);
+        session.getTransaction().commit();
+        session.close();
+    }
+
     public static List<Product> selectFromProduct() {
         return (List<Product>) HibernateSession.getSessionFactory().openSession().createQuery("from Product").list();
     }
+
+    public static void deleteProduct(Product product) {
+        Session session = HibernateSession.getSessionFactory().openSession();
+        session.beginTransaction();
+        session.delete(product);
+        session.getTransaction().commit();
+        session.close();
+    }
+
     public void createOrders(Order order) {
         Session session = HibernateSession.getSessionFactory().openSession();
         session.beginTransaction();

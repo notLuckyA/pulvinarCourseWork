@@ -10,8 +10,10 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 import java.util.List;
@@ -23,6 +25,12 @@ public class AdminScreen {
     public Button btnAddProduct;
     public Button btnUpdateProduct;
     public Button btnDeleteProduct;
+    public Label errorUser;
+    public Label errorProduct;
+
+    public User user;
+    public Product product;
+
     @FXML
     private TableView tablesAdminUsers;
     @FXML
@@ -89,6 +97,26 @@ public class AdminScreen {
 
     public void goAddProduct(ActionEvent actionEvent) throws IOException {
         Main.setRoot("adminAddProductScreen");
+    }
+
+
+    public void deleteUser(ActionEvent actionEvent) {
+        if (tablesAdminUsers.getSelectionModel().getSelectedItem() != null) {
+            InterfaceDB.deleteUser((User) tablesAdminUsers.getSelectionModel().getSelectedItem());
+            unloadingToTablesUsers();
+            errorUser.setText("Успешно");
+        } else {
+            errorUser.setText("ERROR");
+        }
+    }
+    public void deleteProduct(ActionEvent actionEvent) {
+        if (tablesAdminProduct.getSelectionModel().getSelectedItem() != null) {
+            InterfaceDB.deleteProduct((Product) tablesAdminProduct.getSelectionModel().getSelectedItem());
+            unloadingToTablesProduct();
+            errorProduct.setText("Успешно");
+        } else {
+            errorProduct.setText("ERROR");
+        }
     }
 
     public void goOut(ActionEvent actionEvent) throws IOException {
