@@ -99,6 +99,14 @@ public class AdminScreen {
         Main.setRoot("adminAddProductScreen");
     }
 
+    public void goUpdateUsers(ActionEvent actionEvent) throws IOException {
+        Main.setRoot("adminUpdateUsersScreen");
+    }
+
+    public void goUpdateProduct(ActionEvent actionEvent) throws IOException {
+        Main.setRoot("adminUpdateProductScreen");
+    }
+
 
     public void deleteUser(ActionEvent actionEvent) {
         if (tablesAdminUsers.getSelectionModel().getSelectedItem() != null) {
@@ -109,6 +117,7 @@ public class AdminScreen {
             errorUser.setText("ERROR");
         }
     }
+
     public void deleteProduct(ActionEvent actionEvent) {
         if (tablesAdminProduct.getSelectionModel().getSelectedItem() != null) {
             InterfaceDB.deleteProduct((Product) tablesAdminProduct.getSelectionModel().getSelectedItem());

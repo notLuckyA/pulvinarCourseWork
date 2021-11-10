@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <children>
+            <TextField fx:id="loginUpdate" promptText="Логин">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="passwordUpdate" promptText="Пароль">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="90.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <children>
+            <TextField fx:id="firstNameUpdate" promptText="Имя">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="lastNameUpdate" promptText="Фамилия">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin></HBox>
+      <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <children>
+            <TextField fx:id="eMailUpdate" promptText="E-mail">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="telUpdate" promptText="Телефон">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <TextField fx:id="roleUpdate" promptText="Роль">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <Button fx:id="btnUpdateUsers" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #276fa3;" text="Обновить" textFill="WHITE">
+         <VBox.margin>
+            <Insets bottom="20.0" left="150.0" right="150.0" top="20.0" />
+         </VBox.margin>
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <ToolBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT">
+        <items>
+          <Button fx:id="btnOutUsers" mnemonicParsing="false" style="-fx-background-color: #3089c9;" text="Назад" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+        </items>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </ToolBar>
+   </children>
+</VBox>
