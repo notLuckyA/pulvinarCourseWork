@@ -32,8 +32,20 @@ public class InterfaceDB {
         session.close();
     }
 
+    public void createProduct(Product product) {
+        Session session = HibernateSession.getSessionFactory().openSession();
+        session.beginTransaction();
+        session.save(product);
+        session.getTransaction().commit();
+        session.close();
+    }
+
     public static List<Product> selectFromProduct() {
         return (List<Product>) HibernateSession.getSessionFactory().openSession().createQuery("from Product").list();
+    }
+
+    public Product findByName(String name) {
+        return (Product) HibernateSession.getSessionFactory().openSession().createQuery("from Product P where P.nameProduct = '" + name + "'").uniqueResult();
     }
 
     public static void deleteProduct(Product product) {

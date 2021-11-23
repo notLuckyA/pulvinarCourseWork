@@ -39,7 +39,7 @@
                   <Insets right="20.0" />
                </HBox.margin>
             </TextField>
-            <TextField fx:id="filterUpdate" alignment="CENTER" promptText="Наполнитель">
+            <TextField fx:id="filterUpdate" promptText="Наполнитель">
                <font>
                   <Font size="14.0" />
                </font>

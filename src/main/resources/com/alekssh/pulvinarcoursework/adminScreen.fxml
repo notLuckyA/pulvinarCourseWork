@@ -79,7 +79,7 @@
                               <TableColumn fx:id="columnTypeProduct" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" text="Тип" />
                               <TableColumn fx:id="columnFilterProduct" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="150.0" text="Наполнитель" />
                               <TableColumn fx:id="columnSizeProduct" maxWidth="1.7976931348623157E308" minWidth="-1.0" text="Размер" />
-                              <TableColumn fx:id="columnCostProduct" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="68.0" text="Цена" />
+                              <TableColumn fx:id="columnCostProduct" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="66.0" text="Цена" />
                           </columns>
                         </TableView>
                      </center>

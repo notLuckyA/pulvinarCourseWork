@@ -92,7 +92,7 @@ public class AdminScreen {
     }
 
     public void goAddUsers(ActionEvent actionEvent) throws IOException {
-        Main.setRoot("adminAddUsesScreen");
+        Main.setRoot("adminAddUsersScreen");
     }
 
     public void goAddProduct(ActionEvent actionEvent) throws IOException {
