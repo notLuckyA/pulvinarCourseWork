@@ -3,7 +3,6 @@ package com.alekssh.pulvinarcoursework.controllers;
 import com.alekssh.pulvinarcoursework.Main;
 import com.alekssh.pulvinarcoursework.functional.InterfaceDB;
 import com.alekssh.pulvinarcoursework.tables.Product;
-import com.alekssh.pulvinarcoursework.tables.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
