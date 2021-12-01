@@ -32,6 +32,14 @@ public class InterfaceDB {
         session.close();
     }
 
+    public static void updateUser(User user) {
+        Session session = HibernateSession.getSessionFactory().openSession();
+        session.beginTransaction();
+        session.update(user);
+        session.getTransaction().commit();
+        session.close();
+    }
+
     public void createProduct(Product product) {
         Session session = HibernateSession.getSessionFactory().openSession();
         session.beginTransaction();
@@ -52,6 +60,14 @@ public class InterfaceDB {
         Session session = HibernateSession.getSessionFactory().openSession();
         session.beginTransaction();
         session.delete(product);
+        session.getTransaction().commit();
+        session.close();
+    }
+
+    public static void updateProductr(Product product) {
+        Session session = HibernateSession.getSessionFactory().openSession();
+        session.beginTransaction();
+        session.update(product);
         session.getTransaction().commit();
         session.close();
     }

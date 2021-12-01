@@ -13,7 +13,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 import java.util.List;
@@ -28,8 +27,8 @@ public class AdminScreen {
     public Label errorUser;
     public Label errorProduct;
 
-    public User user;
-    public Product product;
+    public static User user;
+    public static Product product;
 
     @FXML
     private TableView tablesAdminUsers;
@@ -99,14 +98,23 @@ public class AdminScreen {
         Main.setRoot("adminAddProductScreen");
     }
 
-    public void goUpdateUsers(ActionEvent actionEvent) throws IOException {
-        Main.setRoot("adminUpdateUsersScreen");
+    public void updateUser(ActionEvent actionEvent) throws IOException {
+        if (tablesAdminUsers.getSelectionModel().getSelectedItem() != null) {
+            user = (User) tablesAdminUsers.getSelectionModel().getSelectedItem();
+            Main.setRoot("adminUpdateUsersScreen");
+        } else {
+            errorUser.setText("ERROR");
+        }
     }
 
-    public void goUpdateProduct(ActionEvent actionEvent) throws IOException {
-        Main.setRoot("adminUpdateProductScreen");
+    public void updateProduct(ActionEvent actionEvent) throws IOException {
+        if (tablesAdminProduct.getSelectionModel().getSelectedItem() != null) {
+            product = (Product) tablesAdminProduct.getSelectionModel().getSelectedItem();
+            Main.setRoot("adminUpdateProductScreen");
+        } else {
+            errorUser.setText("ERROR");
+        }
     }
-
 
     public void deleteUser(ActionEvent actionEvent) {
         if (tablesAdminUsers.getSelectionModel().getSelectedItem() != null) {
