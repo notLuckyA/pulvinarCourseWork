@@ -16,7 +16,7 @@ public class InterfaceDB {
         return (List<User>) HibernateSession.getSessionFactory().openSession().createQuery("from User ").list();
     }
 
-    public void createUser(User user) {
+    public static void createUser(User user) {
         Session session = HibernateSession.getSessionFactory().openSession();
         session.beginTransaction();
         session.save(user);
@@ -40,7 +40,7 @@ public class InterfaceDB {
         session.close();
     }
 
-    public void createProduct(Product product) {
+    public static void createProduct(Product product) {
         Session session = HibernateSession.getSessionFactory().openSession();
         session.beginTransaction();
         session.save(product);
@@ -72,7 +72,7 @@ public class InterfaceDB {
         session.close();
     }
 
-    public void createOrders(Order order) {
+    public static void createOrders(Order order) {
         Session session = HibernateSession.getSessionFactory().openSession();
         session.beginTransaction();
         session.save(order);
